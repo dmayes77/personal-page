@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import bgImage from '../../img/default_avatar.png';
+import myImage from '../../img/davidHeadshot.jpg';
 
 class Landing extends Component {
 	render() {
@@ -13,7 +13,7 @@ class Landing extends Component {
 								<div className="col-md-12 text-center">
 									<img
 										className="mb-4 img-fluid rounded-circle"
-										src="//www.gravatar.com/avatar/6df8f8a644351b16a8392b724f66b767?s=200&r=pg&d=mm"
+										src={myImage}
 										alt="default_avatar"
 									/>
 									<h4>A Brief Introduction</h4>
