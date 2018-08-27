@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/authActions';
-import TextFieldGroup from '../common/textFieldGroup';
+import TextFieldGroup from '../common/TextFieldGroup';
 
 class Register extends Component {
 	constructor() {
@@ -61,7 +61,7 @@ class Register extends Component {
 								<TextFieldGroup
 									placeholder="Name"
 									name="name"
-									value={this.state.name}
+									value={name}
 									onChange={this.onChange}
 									error={errors.name}
 								/>
@@ -69,7 +69,7 @@ class Register extends Component {
 									placeholder="Email"
 									name="email"
 									type="email"
-									value={this.state.email}
+									value={email}
 									onChange={this.onChange}
 									error={errors.email}
 									info="This site uses Gravatar so if you want a profile image, use a Gravatar email"
@@ -78,7 +78,7 @@ class Register extends Component {
 									placeholder="Password"
 									name="password"
 									type="password"
-									value={this.state.password}
+									value={password}
 									onChange={this.onChange}
 									error={errors.password}
 								/>
@@ -86,7 +86,7 @@ class Register extends Component {
 									placeholder="Confirm Password"
 									name="password2"
 									type="password"
-									value={this.state.password2}
+									value={password2}
 									onChange={this.onChange}
 									error={errors.password2}
 								/>

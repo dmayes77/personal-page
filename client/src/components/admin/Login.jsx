@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
-import TextFieldGroup from '../common/textFieldGroup';
+import TextFieldGroup from '../common/TextFieldGroup';
 
 class Login extends Component {
 	constructor() {
@@ -68,7 +68,7 @@ class Login extends Component {
 									placeholder="Password"
 									name="password"
 									type="password"
-									value={this.state.password}
+									value={password}
 									onChange={this.onChange}
 									error={errors.password}
 								/>
