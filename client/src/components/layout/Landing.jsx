@@ -35,7 +35,9 @@ class Landing extends Component {
 										Enter
 									</Link>
 									<p>This website was built with the following tools:</p>
-									<p>mongoDB express react react-router nodejs html5 heroku</p>
+									<p>
+										mongoDB express react react-router redux nodejs html5 heroku
+									</p>
 								</div>
 							</div>
 						</div>

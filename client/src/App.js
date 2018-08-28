@@ -15,7 +15,10 @@ import Landing from './components/layout/Landing';
 import Login from './components/admin/Login';
 import Register from './components/admin/Register';
 import Dashboard from './components/dashboard/Dashboard';
-import CreateProfile from './components/createProfile/CreateProfile';
+import CreateProfile from './components/dashboardActions/CreateProfile';
+import EditProfile from './components/dashboardActions/EditProfile';
+import AddExperience from './components/dashboardActions/AddExperience';
+import AddEducation from './components/dashboardActions/AddEducation';
 
 import './App.css';
 
@@ -53,12 +56,25 @@ class App extends Component {
 							<Route exact path="/register" component={Register} />
 							<Switch>
 								<PrivateRoute exact path="/dashboard" component={Dashboard} />
-							</Switch>
-							<Switch>
 								<PrivateRoute
 									exact
 									path="/create-profile"
 									component={CreateProfile}
+								/>
+								<PrivateRoute
+									exact
+									path="/edit-profile"
+									component={EditProfile}
+								/>
+								<PrivateRoute
+									exact
+									path="/add-experience"
+									component={AddExperience}
+								/>
+								<PrivateRoute
+									exact
+									path="/add-education"
+									component={AddEducation}
 								/>
 							</Switch>
 						</div>

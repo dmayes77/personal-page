@@ -30,7 +30,6 @@ class CreateProfile extends Component {
     };
 
     this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -144,7 +143,7 @@ class CreateProfile extends Component {
                 Let's get some information to make your profile stand out
               </p>
               <small className="d-block pb-3">* = required fields</small>
-              <form onSubmit={this.onSubmit}>
+              <form onSubmit={e => this.onSubmit(e)}>
                 <TextFieldGroup
                   placeholder="* Profile Handle"
                   name="handle"
@@ -160,7 +159,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Give us an idea of where you are at in your career"
+                  info="Give us an idea of where you are in your career"
                 />
                 <TextFieldGroup
                   placeholder="Company"
