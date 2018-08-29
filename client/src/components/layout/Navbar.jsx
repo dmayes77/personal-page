@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
+import resume from '../resume/DavidMayesResume-TN.pdf';
 
 class Navbar extends Component {
 	onLogoutClick(e) {
@@ -18,11 +19,7 @@ class Navbar extends Component {
 		const authLinks = (
 			<ul className="navbar-nav ml-auto">
 				<li className="nav-item">
-					<a
-						href=""
-						onClick={this.onLogoutClick.bind(this)}
-						className="nav-link"
-					>
+					<a href="" onClick={e => this.onLogoutClick(e)} className="nav-link">
 						<img
 							className="rounded-circle"
 							src={user.avatar}
@@ -44,7 +41,7 @@ class Navbar extends Component {
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link className="nav-link" to="/profile">
+					<Link className="nav-link" to="/profile/dmayes">
 						About
 					</Link>
 				</li>
@@ -54,9 +51,9 @@ class Navbar extends Component {
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link className="nav-link" to="/resume">
+					<a className="nav-link" href={resume} download="David_Mayes_Resume">
 						Resume/CV
-					</Link>
+					</a>
 				</li>
 			</ul>
 		);
@@ -64,10 +61,10 @@ class Navbar extends Component {
 		return (
 			<nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
 				<div className="container">
-					<Link className="navbar-brand" to="/">
+					<span className="navbar-brand" to="/">
 						<i className="fas fa-code mr-2" />
 						David Mayes
-					</Link>
+					</span>
 					<button
 						className="navbar-toggler"
 						type="button"

@@ -9,16 +9,20 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import PrivateRoute from './components/admin/PrivateRoute';
+
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
-import Login from './components/admin/Login';
 import Register from './components/admin/Register';
+import Login from './components/admin/Login';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/dashboardActions/CreateProfile';
 import EditProfile from './components/dashboardActions/EditProfile';
 import AddExperience from './components/dashboardActions/AddExperience';
 import AddEducation from './components/dashboardActions/AddEducation';
+import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
+import NotFound from './components/not-found/NotFound';
 
 import './App.css';
 
@@ -36,7 +40,7 @@ if (localStorage.jwtToken) {
 	if (decoded.exp < currentTime) {
 		// Logout user
 		store.dispatch(logoutUser());
-		// TODO: Clear current Profile
+		// Clear current Profile
 		store.dispatch(clearCurrentProfile());
 		// Redirect to login
 		window.location.href = '/login';
@@ -52,8 +56,10 @@ class App extends Component {
 						<Navbar />
 						<Route exact path="/" component={Landing} />
 						<div className="container">
-							<Route exact path="/login" component={Login} />
 							<Route exact path="/register" component={Register} />
+							<Route exact path="/login" component={Login} />
+							<PrivateRoute exact path="/profiles" component={Profiles} />
+							<Route exact path="/profile/dmayes" component={Profile} />
 							<Switch>
 								<PrivateRoute exact path="/dashboard" component={Dashboard} />
 								<PrivateRoute
@@ -77,6 +83,7 @@ class App extends Component {
 									component={AddEducation}
 								/>
 							</Switch>
+							<Route exact path="/not-found" component={NotFound} />
 						</div>
 						<Footer />
 					</div>

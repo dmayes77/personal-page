@@ -31,8 +31,11 @@ class Landing extends Component {
 										and if you would like to build something together please get
 										in touch.
 									</p>
-									<Link className="btn btn-lg btn-info mb-3 px-5" to="/profile">
-										Enter
+									<Link
+										to="/profile/dmayes"
+										className="btn btn-lg btn-info mb-3 px-5"
+									>
+										View Profile
 									</Link>
 									<p>This website was built with the following tools:</p>
 									<p>
