@@ -10,11 +10,11 @@ class ProfileHeader extends Component {
 				<div className="col-md-12">
 					<div className="card card-body bg-info text-white mb-3">
 						<div className="row">
-							<div className="col-4 col-md-3 m-auto">
+							<div className="m-auto">
 								<img
 									className="rounded-circle"
 									src={profile.user.avatar}
-									alt=""
+									alt="David Mayes Headshot"
 								/>
 							</div>
 						</div>
@@ -35,6 +35,16 @@ class ProfileHeader extends Component {
 										target="_blank"
 									>
 										<i className="fas fa-globe fa-2x" />
+									</a>
+								)}
+
+								{isEmpty(profile.social && profile.social.github) ? null : (
+									<a
+										className="text-white p-2"
+										href={profile.social.github}
+										target="_blank"
+									>
+										<i className="fab fa-github fa-2x" />
 									</a>
 								)}
 

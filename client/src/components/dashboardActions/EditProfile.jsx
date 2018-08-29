@@ -27,6 +27,7 @@ class CreateProfile extends Component {
 			linkedin: '',
 			youtube: '',
 			instagram: '',
+			github: '',
 			errors: {}
 		};
 
@@ -72,6 +73,9 @@ class CreateProfile extends Component {
 			profile.instagram = !isEmpty(profile.social.instagram)
 				? profile.social.instagram
 				: '';
+			profile.github = !isEmpty(profile.social.github)
+				? profile.social.github
+				: '';
 
 			// Set component fields state
 			this.setState({
@@ -87,7 +91,8 @@ class CreateProfile extends Component {
 				facebook: profile.facebook,
 				linkedin: profile.linkedin,
 				youtube: profile.youtube,
-				instagram: profile.instagram
+				instagram: profile.instagram,
+				github: profile.github
 			});
 		}
 	}
@@ -108,7 +113,8 @@ class CreateProfile extends Component {
 			facebook: this.state.facebook,
 			linkedin: this.state.linkedin,
 			youtube: this.state.youtube,
-			instagram: this.state.instagram
+			instagram: this.state.instagram,
+			github: this.state.github
 		};
 
 		this.props.createProfile(profileData, this.props.history);
@@ -127,21 +133,12 @@ class CreateProfile extends Component {
 			socialInputs = (
 				<div>
 					<InputGroup
-						placeholder="Twitter Profile URL"
-						name="twitter"
-						icon="fab fa-twitter"
-						value={this.state.twitter}
+						placeholder="Github Page URL"
+						name="github"
+						icon="fab fa-github"
+						value={this.state.github}
 						onChange={this.onChange}
-						error={errors.twitter}
-					/>
-
-					<InputGroup
-						placeholder="Facebook Page URL"
-						name="facebook"
-						icon="fab fa-facebook"
-						value={this.state.facebook}
-						onChange={this.onChange}
-						error={errors.facebook}
+						error={errors.github}
 					/>
 
 					<InputGroup
@@ -151,6 +148,15 @@ class CreateProfile extends Component {
 						value={this.state.linkedin}
 						onChange={this.onChange}
 						error={errors.linkedin}
+					/>
+
+					<InputGroup
+						placeholder="Facebook Page URL"
+						name="facebook"
+						icon="fab fa-facebook"
+						value={this.state.facebook}
+						onChange={this.onChange}
+						error={errors.facebook}
 					/>
 
 					<InputGroup
@@ -169,6 +175,15 @@ class CreateProfile extends Component {
 						value={this.state.instagram}
 						onChange={this.onChange}
 						error={errors.instagram}
+					/>
+
+					<InputGroup
+						placeholder="Twitter Profile URL"
+						name="twitter"
+						icon="fab fa-twitter"
+						value={this.state.twitter}
+						onChange={this.onChange}
+						error={errors.twitter}
 					/>
 				</div>
 			);
