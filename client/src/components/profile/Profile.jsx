@@ -56,8 +56,8 @@ class Profile extends Component {
 							className="btn btn-info shadow p-3 mt-4 rounded"
 							href={`mailto:dmayes77@gmail.com`}
 						>
-							<i class="far fa-envelope mr-2" />
-							Click here to contact me
+							<i className="far fa-envelope mr-2" />
+							Click here to email me!
 						</a>
 					</div>
 				</div>

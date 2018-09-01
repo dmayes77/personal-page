@@ -17,7 +17,7 @@ class Landing extends Component {
 				<div className="landing">
 					<div className="dark-overlay landing-inner text-light">
 						<div className="container">
-							<div className="row">
+							<div className="row mb-5">
 								<div className="col-md-12 text-center">
 									<img
 										className="mb-4 img-fluid rounded-circle"
@@ -26,10 +26,10 @@ class Landing extends Component {
 									/>
 									<h4>A Brief Introduction</h4>
 									<p className="lead">
-										My Name is David. Please browse around my website to view my
-										profile. I am eager to engage in new and exciting projects
-										and if you would like to build something together please get
-										in touch.
+										My Name is David Mayes. Please browse around my website to
+										view my profile. I am eager to engage in new and exciting
+										projects and if you would like to build something together
+										please get in touch.
 									</p>
 									<Link
 										to="/profile/dmayes"
@@ -40,17 +40,30 @@ class Landing extends Component {
 								</div>
 							</div>
 							<p className="text-center">
-								This website was built with the following tools:
+								This website was built with the following technologies:
 							</p>
-							<div className="row justify-content-around">
-								<div>mongoDB</div>
-								<div>express</div>
-								<div>React</div>
-								<div>React-Router</div>
-								<div>Redux</div>
-								<div>nodejs</div>
-								<div>html5</div>
-								<div>heroku</div>
+							<div className="row justify-content-center devicon">
+								<div className="mr-4 mb-3">
+									<i className="devicon-mongodb-plain-wordmark" />
+								</div>
+								<div className="mr-4 mb-3">
+									<i className="devicon-express-original" />
+								</div>
+								<div className="mr-4 mb-3">
+									<i className="devicon-react-original-wordmark" />
+								</div>
+								<div className="mr-4 mb-3">
+									<i className="devicon-nodejs-plain" />
+								</div>
+								<div className="mr-4 mb-3">
+									<i className="devicon-html5-plain-wordmark" />
+								</div>
+								<div className="mr-4 mb-3">
+									<i className="devicon-visualstudio-plain" />
+								</div>
+								<div className="mr-4 mb-3">
+									<i className="devicon-heroku-original-wordmark" />
+								</div>
 							</div>
 						</div>
 					</div>

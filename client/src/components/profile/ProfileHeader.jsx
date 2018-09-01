@@ -26,7 +26,7 @@ class ProfileHeader extends Component {
 										className="text-white"
 										href={`mailto:${profile.user.email}`}
 									>
-										Click here to contact me
+										{profile.user.email}
 									</a>
 								)}
 							</div>
