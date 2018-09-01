@@ -21,6 +21,7 @@ class Profile extends Component {
 
 	render() {
 		const { profile, loading } = this.props.profile;
+
 		let profileContent;
 
 		if (profile === null || loading) {
@@ -49,6 +50,15 @@ class Profile extends Component {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">{profileContent}</div>
+					</div>
+					<div className=" text-center my-2">
+						<a
+							className="btn btn-info shadow p-3 mt-4 rounded"
+							href={`mailto:dmayes77@gmail.com`}
+						>
+							<i class="far fa-envelope mr-2" />
+							Click here to contact me
+						</a>
 					</div>
 				</div>
 			</div>

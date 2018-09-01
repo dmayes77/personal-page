@@ -37,11 +37,20 @@ class Landing extends Component {
 									>
 										View Profile
 									</Link>
-									<p>This website was built with the following tools:</p>
-									<p>
-										mongoDB express react react-router redux nodejs html5 heroku
-									</p>
 								</div>
+							</div>
+							<p className="text-center">
+								This website was built with the following tools:
+							</p>
+							<div className="row justify-content-around">
+								<div>mongoDB</div>
+								<div>express</div>
+								<div>React</div>
+								<div>React-Router</div>
+								<div>Redux</div>
+								<div>nodejs</div>
+								<div>html5</div>
+								<div>heroku</div>
 							</div>
 						</div>
 					</div>

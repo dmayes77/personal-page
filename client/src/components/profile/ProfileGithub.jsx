@@ -35,7 +35,7 @@ class ProfileGithub extends Component {
 		const { repos } = this.state;
 
 		const repoItems = repos.map(repo => (
-			<div key={repo.id} className="card card-body mb-2">
+			<div key={repo.id} className="card card-body mb-3 shadow-sm p-3 rounded">
 				<div className="row">
 					<div className="col-md-6">
 						<h4>

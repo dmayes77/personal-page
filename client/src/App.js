@@ -23,6 +23,7 @@ import AddEducation from './components/dashboardActions/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import NotFound from './components/not-found/NotFound';
+import Projects from './components/projects/Projects';
 
 import './App.css';
 
@@ -59,6 +60,7 @@ class App extends Component {
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/login" component={Login} />
 							<PrivateRoute exact path="/profiles" component={Profiles} />
+							<Route exact path="/projects" component={Projects} />
 							<Route exact path="/profile/dmayes" component={Profile} />
 							<Switch>
 								<PrivateRoute exact path="/dashboard" component={Dashboard} />

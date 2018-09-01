@@ -37,21 +37,19 @@ class Navbar extends Component {
 			<ul className="navbar-nav ml-auto">
 				<li className="nav-item">
 					<Link className="nav-link" to="/profile/dmayes">
+						<i className="fas fa-user-tie mr-2" />
 						About
 					</Link>
 				</li>
 				<li className="nav-item">
 					<Link className="nav-link" to="/projects">
+						<i className="fas fa-laptop-code mr-2" />
 						Projects
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link className="nav-link" to="/">
-						Contact
-					</Link>
-				</li>
-				<li className="nav-item">
 					<a className="nav-link" href={resume} download="David_Mayes_Resume">
+						<i className="fas fa-file-download mr-2" />
 						Resume/CV
 					</a>
 				</li>
