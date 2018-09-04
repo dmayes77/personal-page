@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
-import resume from '../resume/DavidMayesResume-TN.pdf';
 
 class Navbar extends Component {
 	onLogoutClick(e) {
@@ -48,10 +47,10 @@ class Navbar extends Component {
 					</Link>
 				</li>
 				<li className="nav-item">
-					<a className="nav-link" href={resume} download="David_Mayes_Resume">
-						<i className="fas fa-file-download mr-2" />
-						Resume/CV
-					</a>
+					<Link className="nav-link" to="/resume">
+						<i className="far fa-file-alt mr-2" />
+						Resume
+					</Link>
 				</li>
 			</ul>
 		);

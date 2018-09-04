@@ -24,6 +24,7 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import NotFound from './components/not-found/NotFound';
 import Projects from './components/projects/Projects';
+import Resume from './components/resume/Resume';
 
 import './App.css';
 
@@ -56,8 +57,9 @@ class App extends Component {
 					<div className="App">
 						<Navbar />
 						<Route exact path="/" component={Landing} />
-						<Route exact path="/projects" component={Projects} />
 						<div className="container">
+							<Route exact path="/projects" component={Projects} />
+							<Route exact path="/resume" component={Resume} />
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/login" component={Login} />
 							<PrivateRoute exact path="/profiles" component={Profiles} />

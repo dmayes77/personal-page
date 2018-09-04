@@ -7,6 +7,7 @@ import { getProfileByHandle } from '../../actions/profileActions';
 import ProfileAbout from './ProfileAbout';
 import ProfileCreds from './ProfileCreds';
 import ProfileGithub from './ProfileGithub';
+import resume from '../resume/DavidMayesResume-TN.pdf';
 
 class Profile extends Component {
 	componentDidMount() {
@@ -51,14 +52,22 @@ class Profile extends Component {
 					<div className="row">
 						<div className="col-md-12">{profileContent}</div>
 					</div>
-					<div className=" text-center my-2">
-						<a
-							className="btn btn-info shadow p-3 mt-4 rounded"
-							href={`mailto:dmayes77@gmail.com`}
-						>
-							<i className="far fa-envelope mr-2" />
-							Click here to email me!
-						</a>
+					<div className="row justify-content-around">
+						<div className=" text-center my-2">
+							<a
+								className="btn btn-info shadow p-3 mt-4 rounded"
+								href={`mailto:dmayes77@gmail.com`}
+							>
+								<i className="far fa-envelope mr-2" />
+								Click here to email me!
+							</a>
+						</div>
+						<div className=" text-center my-2">
+							<a className="btn btn-info shadow p-3 mt-4 rounded" href={resume}>
+								<i className="fas fa-file-download mr-2" />
+								Download Resume/CV
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

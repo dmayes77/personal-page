@@ -39,16 +39,12 @@
 	color: #bbb !important;
 }
 
-.project-img {
-	position: relative;
-	background: url('./img/ash-edmonds-510566-unsplash.jpg') no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	margin-top: -24px;
-	margin-bottom: -50px;
-}
-
 .devicon i {
 	font-size: 3rem;
+}
+
+.project-wrapper {
+	background: #fff;
+	padding: 120px;
+	padding-right: 120px;
 }
